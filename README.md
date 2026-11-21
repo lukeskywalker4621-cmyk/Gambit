@@ -1,2 +1,2 @@
 # Gambit
-Chess site
+Free open-source chess.
