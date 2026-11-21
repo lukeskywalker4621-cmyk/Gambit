@@ -76,7 +76,30 @@ header {
     background: transparent;
     color: inherit;
     cursor: pointer;
-    transform: translateX(-50%);
+    transform: translateX(-930%) translateY(-50%);
+}
+
+nav > button{
+    position: absolute;
+    border: none;
+    padding: 0rem;
+    background: transparent;
+    color: var(--text);
+    left: 50%;
+    cursor: pointer;
+    align-items: center;
+}
+
+nav .play-button{
+    transform: translateX(+250px) translateY(-15px);
+}
+
+nav .learn-button{
+    transform: translateX(+290px) translateY(-15px);
+}
+
+nav .about-button{
+    transform: translateX(+340px) translateY(-15px);
 }
 
 .top-bar-divider{
