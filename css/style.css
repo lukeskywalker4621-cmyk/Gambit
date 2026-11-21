@@ -1,64 +1,112 @@
+:root {
+    color-scheme: dark;
+    --bg: #222121;
+    --text: #aeafac;
+    --purple-dark: #2d2432;
+    --purple-mid: #413052;
+    --purple-light: #6a3b82;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 body {
+    min-height: 100vh;
     margin: 0;
-    background-color: rgb(34, 33, 33);
-    color: rgb(175, 172, 172);
+    padding-bottom: 4rem; /* Keeps content clear of the fixed footer */
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: system-ui, sans-serif;
 }
 
 header {
-    background-color: rgb(34, 33, 33);
+    background-color: var(--bg);
     text-transform: uppercase;
 }
 
 .top-bar {
+    position: relative;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    justify-content: space-between;
+    min-height: 6rem;
+    padding: 1rem 2rem;
     background: linear-gradient(
-    to top,
-    #222121 0%,
-    #2d2432 40%,
-    #413052 70%,
-    #6a3b82 100%
-);
+        to top,
+        var(--bg) 0%,
+        var(--purple-dark) 40%,
+        var(--purple-mid) 70%,
+        var(--purple-light) 100%
+    );
 }
 
-footer{
+.top-bar h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+.top-bar nav {
+    order: -1;
+}
+
+.logo,
+.main-menu-button {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.logo {
+    object-fit: contain;
+}
+
+.main-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.main-menu-button:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+}
+
+footer {
     position: fixed;
+    z-index: 10;
+    right: 0;
     bottom: 0;
-    width: 100%;
+    left: 0;
     display: flex;
     justify-content: center;
     padding: 1rem;
     background: linear-gradient(
         to bottom,
-    #222121 0%,
-    #2d2432 40%,
-    #413052 70%,
-    #6a3b82 100%
-);
+        var(--bg) 0%,
+        var(--purple-dark) 40%,
+        var(--purple-mid) 70%,
+        var(--purple-light) 100%
+    );
 }
 
-.top-bar h1 {
-    margin: 0;
-}
-.top-bar nav{
-    order: -1;
-}
+@media (max-width: 600px) {
+    .top-bar {
+        padding-inline: 1rem;
+    }
 
-.logo {
-    width: 50px;
-    height: 50px;
-}
-
-.main-menu-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    width: 50px;
-    height: 50px;
-    border: 0;
-    background: transparent;
-    cursor: pointer;
+    .top-bar h1 {
+        max-width: 55%;
+    }
 }
