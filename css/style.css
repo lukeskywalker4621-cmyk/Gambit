@@ -44,11 +44,9 @@ header {
 }
 
 .top-bar h1 {
-    position: absolute;
-    top: 50%;
-    left: 12%;
+    position: relative;
     margin: 0;
-    transform: translate(-50%, -50%);
+    transform: translate(-750px, 0px);
     text-align: center;
     font-size: clamp(1.25rem, 4vw, 2rem);
 }
@@ -76,34 +74,33 @@ header {
     background: transparent;
     color: inherit;
     cursor: pointer;
-    transform: translateX(-930%) translateY(-50%);
+    transform: translateX(-30px) translateY(8px);
 }
 
 nav > button{
-    position: absolute;
+    position: relative;
     border: none;
     padding: 0rem;
     background: transparent;
     color: var(--text);
-    left: 50%;
     cursor: pointer;
     align-items: center;
 }
 
 nav .play-button{
-    transform: translateX(+250px) translateY(-15px);
+    transform: translateX(+600px) translateY(-8px);
 }
 
 nav .learn-button{
-    transform: translateX(+290px) translateY(-15px);
+    transform: translateX(+620px) translateY(-8px);
 }
 
 nav .about-button{
-    transform: translateX(+340px) translateY(-15px);
+    transform: translateX(+640px) translateY(-8px);
 }
 
 .top-bar-divider{
-    position: absolute;
+    position: relative;
     width: 100%;
     height: 100%;
     opacity: 0.5;
