@@ -1,0 +1,157 @@
+:root {
+    color-scheme: dark;
+
+    --bg: #222121;
+    --text: #aeafac;
+
+    --purple-dark: #2d2432;
+    --purple-mid: #413052;
+    --purple-light: #6a3b82;
+
+    --board-light: #eeeed2;
+    --board-dark: #769656;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 4rem;
+
+    background-color: var(--bg);
+    color: var(--text);
+
+    font-family: system-ui, sans-serif;
+}
+
+header {
+    background-color: var(--bg);
+    text-transform: uppercase;
+}
+
+.top-bar {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 6rem;
+    padding: 1rem 2rem;
+
+    background: linear-gradient(
+        to top,
+        var(--bg) 0%,
+        var(--purple-dark) 40%,
+        var(--purple-mid) 70%,
+        var(--purple-light) 100%
+    );
+}
+
+.top-bar h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    margin: 0;
+    transform: translate(-50%, -50%);
+
+    text-align: center;
+    font-size: clamp(1.25rem, 4vw, 2rem);
+}
+
+.logo, .main-menu-button {
+    width: 3.125rem;
+    height: 3.125rem;
+}
+
+.logo {
+    object-fit: contain;
+}
+
+.main-menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    border: 0;
+
+    background: transparent;
+    color: inherit;
+
+    cursor: pointer;
+}
+
+.main-menu-button:focus-visible {
+    outline: 2px solid var(--text);
+    outline-offset: 4px;
+}
+
+#chessboard {
+    display: grid;
+
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+    width: min(90vw, 560px);
+    aspect-ratio: 1 / 1;
+
+    margin: 2rem auto;
+
+    border: 3px solid #353333;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    aspect-ratio: 1 / 1;
+}
+
+.light {
+    background-color: var(--board-light);
+}
+
+.dark {
+    background-color: var(--board-dark);
+}
+
+
+footer {
+    position: fixed;
+    z-index: 10;
+
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 1rem;
+
+    background: linear-gradient(
+        to bottom,
+        var(--bg) 0%,
+        var(--purple-dark) 40%,
+        var(--purple-mid) 70%,
+        var(--purple-light) 100%
+    );
+}
+
+@media (max-width: 600px) {
+    .top-bar {
+        padding-inline: 1rem;
+    }
+
+    .top-bar h1 {
+        max-width: 55%;
+    }
+}
