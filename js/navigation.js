@@ -10,3 +10,16 @@ document.addEventListener("DOMContentLoaded", () => {
       window.location.href = "./pages/play.html";
     });
   });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const profileButton = document.querySelector(".profile-button");
+
+    if (!profileButton) {
+      console.error('No element found with class "profile-button".');
+      return;
+    }
+
+    profileButton.addEventListener("click", () => {
+      window.location.href = "./pages/profile.html";
+    });
+  });
