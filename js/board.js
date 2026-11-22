@@ -1,6 +1,9 @@
-const board = document.getElementById("chessboard");
-
 function createBoard() {
+    const board = document.getElementById("chessboard");
+    if (!board) {
+        console.error('No element found with id "chessboard".');
+        return;
+    }
 
     for (let row = 0; row < 8; row++) {
 
