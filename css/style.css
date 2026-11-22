@@ -69,6 +69,7 @@ header {
     object-fit: contain;
     display: block;
     margin-right: 12px;
+    cursor: pointer;
 }
 
 .main-menu-button {
