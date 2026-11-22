@@ -1,3 +1,4 @@
+// Add play button click functionality
 document.addEventListener("DOMContentLoaded", () => {
     const playButton = document.querySelector(".play-button");
 
@@ -11,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+// Add about button click functionality
 document.addEventListener("DOMContentLoaded", () => {
     const profileButton = document.querySelector(".profile-button");
 
