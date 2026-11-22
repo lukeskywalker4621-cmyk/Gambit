@@ -1,23 +1,49 @@
-
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Play Chess | Gambit</title>
-
-    <link rel="stylesheet" href="../css/board.css">
+    <title>Gambit - Play</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/x-icon" href="../assets/icons/Icon.ico">
 </head>
-
 <body>
+    <header>
+        <div class="top-bar">
+            <button class="main-menu-button">
+               <img src="../assets/icons/IconNoBG.png" alt="Logo" class="logo">     
+            </button>
 
-    <h1>GAMBIT</h1>
-    <img src="../assets/icons/IconNoBG.png" alt="Logo" class="logo">
+            <h1>Gambit</h1>
+            <h1 id="page-title">Play</h1>
+            <nav>
+                <button class="play-button">
+                    <p>Play</p>
+                </button>
+                <button class="learn-button">
+                    <p>Learn</p>
+                </button>
+                <button class="about-button">
+                    <p>About</p>
+                </button>
+                <button class="profile-button">
+                    <p>Profile</p>
+                </button>
+            <div class="hamburger-menu">
+            </div>
+            </nav>
+        </div>
+        <hr class="top-bar-divider">
+        
+    </header>
+    <main>
+    </main>
+    <footer>
+            <p class="copyright">&copy; 2026 Gambit. All rights reserved.</p>
+    </footer>
 
-    <div id="chessboard"></div>
-
+    <script src="../js/navigation.js" defer></script>
     <script src="../js/board.js"></script>
-
 </body>
 </html>

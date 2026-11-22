@@ -1,4 +1,3 @@
-
 :root {
     color-scheme: dark;
     --bg: #222121;
@@ -80,6 +79,7 @@ header {
     border: 0;
     background: transparent;
     color: inherit;
+    order: -1;
     cursor: pointer;
 }
 
@@ -148,6 +148,16 @@ footer {
     font-size: 0.875rem;
     text-align: center;
     bottom: 5px;
+}
+
+#page-title {
+    position: fixed;
+    color: var(--text);
+    font-size: clamp(1.25rem, 4vw, 2rem);
+    text-align: center;
+    margin: 1rem 0;
+    left: 50%;
+
 }
 
 @media (max-width: 600px) {

@@ -1,27 +1,21 @@
-// Add play button click functionality
 document.addEventListener("DOMContentLoaded", () => {
-    const playButton = document.querySelector(".play-button");
+    const isPagesPage = window.location.pathname.includes("/pages/");
+    const prefix = isPagesPage ? "../" : "./";
 
-    if (!playButton) {
-      console.error('No element found with class "play-button".');
-      return;
-    }
+    const destinations = {
+        ".play-button": "pages/play.html",
+        ".learn-button": "pages/learn.html",
+        ".about-button": "pages/about.html",
+        ".profile-button": "pages/profile.html",
+        ".logo": "index.html"
+    };
 
-    playButton.addEventListener("click", () => {
-      window.location.href = "./pages/play.html";
+    Object.entries(destinations).forEach(([selector, destination]) => {
+        const button = document.querySelector(selector);
+        if (button) {
+            button.addEventListener("click", () => {
+                window.location.href = prefix + destination;
+            });
+        }
     });
-  });
-
-// Add about button click functionality
-document.addEventListener("DOMContentLoaded", () => {
-    const profileButton = document.querySelector(".profile-button");
-
-    if (!profileButton) {
-      console.error('No element found with class "profile-button".');
-      return;
-    }
-
-    profileButton.addEventListener("click", () => {
-      window.location.href = "./pages/profile.html";
-    });
-  });
+});
